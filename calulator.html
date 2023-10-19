@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: sans-serif;
+            background-color: #ecf0f3;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(108, 119, 116);
+
+        }
+        .calc{
+            box-shadow: 6px 6px 12px #fff, 6px 6px 6px 13px rgba(0,0,0,.16); 
+            border-radius: 28px;
+            padding: 26px;
+            display: grid;
+            grid-template-columns: repeat(4,76px);
+        }
+        .input{
+            grid-column: span 4;
+            height: 68px;
+            width: 258px;
+            box-shadow: inset -6px -6px 13px #fff,inset 6px 6px 13px rgba(0,0,0,16);
+            background-color: #ecf0f3;
+            border-left: 500%;
+            border-radius: 32px;
+            color: rgb(26,25,25);
+            text-align: end;
+            margin: 40px 0px 30px 0px;
+            padding: 40px;
+            padding-right: 50%;
+            font-size: 40px;
+         }
+       
+        
+        button{
+            box-shadow: inset 6px 6px 13px #fff, 
+            6px 6px rgba(0,0,0,.16);
+            background-color: #ecf0f3;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-weight: bold;
+            margin: 10px ;
+            font-size: 20px;
+        }
+        .equal {
+            width : 50px;
+            border-radius: 42px;
+            box-shadow: inset 6px 6px 13px #fff, 
+            6px 6px rgba(0,0,0,.16);  
+        }
+        .cal{
+       
+            height: 50px;
+            width: 258px;
+            box-shadow: inset -6px -6px 13px #fff,inset 6px 6px 13px rgba(0,0,0,16);
+            background-color: #ecf0f3;
+            font-size: large;
+            border-radius: 32px;
+            color: rgb(26,25,25);
+            border:100px;           
+            
+            font-size: 40px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="calc">
+            
+                <input type="text" id="inputtext" placeholder="0">
+    
+        
+                <button onclick="clr()">C</button>
+                <button onclick="del()">Del</button>
+                <button onclick="calculate('%')">%</button>
+                <button onclick="calculate('7')">7</button>
+                <button onclick="calculate('8')">8</button>
+                <button onclick="calculate('9')">9</button>
+                <button onclick="calculate('/')">/</button>
+                <button onclick="calculate('4')">4</button>
+                <button onclick="calculate('5')">5</button>
+                <button onclick="calculate('6')">6</button>
+                <button onclick="calculate('*')">*</button>
+                <button onclick="calculate('1')">1</button>
+                <button onclick="calculate('2')">2</button>
+                <button onclick="calculate('3')">3</button>
+                <button onclick="calculate('-')">-</button>
+                <button onclick="calculate('+')">+</button>
+                <button onclick="calculate('.')">.</button>
+                <button onclick="calculate('0')">0</button>
+                <!-- <button onclick="calculate('00')">00</button> -->
+                <button class="equal" onclick="Result()">=</button>
+                <script src="calulator.js"></script>
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>
